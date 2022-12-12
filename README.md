@@ -1,8 +1,12 @@
 # sanitize_text
 
-
-$fileName = "";
-
+## Usage
+```php
+$fileName = "Türkçe Karakterleri Sıfırlama";
+echo sanitaze_text($fileName);
+```
+### Add Function
+```php 
 function sanitaze_text( $value ) {
     $specialFrom = array("/Ğ/","/Ü/","/Ş/","/İ/","/Ö/","/Ç/","/ğ/","/ü/","/ş/","/ı/","/ö/","/ç/");
     $spacialTo = array("G","U","S","I","O","C","g","u","s","i","o","c");
@@ -16,6 +20,7 @@ function sanitaze_text( $value ) {
     $value = preg_replace("/-$/","",$value);
     return $value;
 }
+```
 
-
-echo sanitaze_text($fileName);
+#### Referance
+[İsmet Akcakaya](http://ismetakcakaya.com/php-sef-url-fonsiyonu-turkce-karakter-sorunu-cozulmus.html)
